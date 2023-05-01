@@ -28,7 +28,7 @@ export default function Home() {
   const [allWords, setAllWords] = useState<string[]>([])
 
   const loadWords = async () => {
-    const res = await fetch('/filtered_words.txt')
+    const res = await fetch('/sorted_words.txt')
     const text = await res.text()
     const words = text.split('\n')
     setAllWords(words)
